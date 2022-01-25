@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction }from 'express';
 import routes from '../routes';
+import generalErrorHandler from '../errors/generalErrorHandler';
 
 export default async ({ app }: { app: express.Application }) => {
     require('dotenv').config();
@@ -10,6 +11,7 @@ export default async ({ app }: { app: express.Application }) => {
     app.use(require('helmet')())
 
     app.use(routes)
+    app.use(generalErrorHandler)
 
     // import type { ErrorRequestHandler } from "express";
     // export type ErrorRequestHandler = (err: any, req: Request, res: Response, next:NextFunction
