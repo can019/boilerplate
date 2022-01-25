@@ -19,6 +19,8 @@
     "dev": "echo \"starting in dev\" && nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/app.ts dev"
   },
   "dependencies": {
+    "dotenv": "^14.3.0",
+    "figlet": "^1.5.2",
     "helmet": "^5.0.1"
   }
 }
