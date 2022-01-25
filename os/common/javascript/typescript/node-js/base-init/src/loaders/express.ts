@@ -31,6 +31,6 @@ export default async ({ app }: { app: express.Application }) => {
 
     // ...More middlewares
   
-
-  return app;   // Return the express app
+    console.log('Express Intialized ✅');
+    return app;   // Return the express app
 }
